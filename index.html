@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,11 @@
 
         #yes {
             background: green;
+        }
+
+        #yes a {
             color: white;
+            text-decoration: none;
         }
 
         #no {
@@ -44,33 +49,38 @@
 
 <body>
 
-<div class="container">
-    <h1>Do you love me? ❤️</h1>
+    <div class="container">
+        <h1>Do you love me? ❤️</h1>
 
-    <button id="yes">YES</button>
-    <button id="no">NO</button>
-</div>
+        <button class="text-white" id="yes">
+            <a href="home.html">Yes</a>
+        </button>
+        <button id="no">NO</button>
+    </div>
 
-<script>
-    const noButton = document.getElementById("no");
-    const yesButton = document.getElementById("yes");
+    <script>
+        const noButton = document.getElementById("no");
+        const yesButton = document.getElementById("yes");
 
-    noButton.addEventListener("mouseover", function () {
+        noButton.addEventListener("mouseover", function () {
 
-        const maxX = window.innerWidth - noButton.offsetWidth;
-        const maxY = window.innerHeight - noButton.offsetHeight;
+            const maxX = window.innerWidth - noButton.offsetWidth;
+            const maxY = window.innerHeight - noButton.offsetHeight;
 
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
 
-        noButton.style.left = randomX + "px";
-        noButton.style.top = randomY + "px";
-    });
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        });
 
-    yesButton.addEventListener("click", function () {
-        window.location.href = "/love";
-    });
-</script>
+        yesButton.addEventListener("click", function () {
+            window.location.href = "/love";
+        });
+
+      
+    </script>
 
 </body>
+
 </html>
